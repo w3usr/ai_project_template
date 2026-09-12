@@ -63,9 +63,6 @@ Carefully and deliberately means:
 - **The repository stays private until you rotate.** Git history keeps a committed secret
   after the file is deleted, so this repository cannot simply be flipped to public later:
   rotate everything first, then flip.
-- **Keep it out of the AI's reach.** `.claude/settings.json` carries `permissions.deny` rules
-  for the paths that hold secrets, so Claude Code does not read them into a session. Extend
-  those rules whenever you add a new secret path.
 
 Callsigns and names are public information in the FCC ULS database, so publishing a callsign
 is fine. Aggregating a member's callsign with their address, schedule, or dorm is not.

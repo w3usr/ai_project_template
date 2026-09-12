@@ -168,3 +168,15 @@ carries the actual running model ID.
   written from memory.
 - **Human Review Status**: Reviewed and verified
 - **Git Hash**: 7252c10
+
+## [2026-09-12 14:36 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Drop the `permissions.deny` read rules, which NAF did not ask for and
+  declined when offered.
+- **Sections/Files Affected**: `.claude/settings.json` (back to the `$schema` line alone),
+  `README.md` (instantiation step removed, later steps renumbered, file-table row removed),
+  `CLAUDE.md` ("Keep it out of the AI's reach" bullet removed),
+  `.claude/rules/web-development.md` (settings cross-reference removed)
+- **Nature of Contribution**: Edit, at NAF's direction
+- **Human Review Status**: Reviewed and verified
+- **Git Hash**: [pending]

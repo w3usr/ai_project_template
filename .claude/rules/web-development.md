@@ -50,8 +50,7 @@ The site is a university club's public face; accessibility is a requirement, not
 ## Security and Secrets
 - Default to environment variables and a gitignored `.env` for API keys, database
   credentials, SMTP passwords, CMS logins, and analytics tokens. Where a private repository
-  deliberately holds deploy configuration, `CLAUDE.md` records that decision and
-  `.claude/settings.json` denies Claude read access to those paths.
+  deliberately holds deploy configuration, `CLAUDE.md` records that decision.
 - A personal login or personal API key is never committed, at any visibility.
 - Never commit a database dump that contains member data.
 - Keep dependencies current, and treat a published advisory in a dependency as work to do.
