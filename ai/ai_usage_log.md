@@ -65,3 +65,15 @@ carries the actual running model ID.
   `.claude/rules/amateur-radio-operations.md`, and the club roles named in `CLAUDE.md`,
   need verification by the trustee or advisor before this template is used for a real project
 - **Git Hash**: f745d39
+
+## [2026-09-12 13:38 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: License the template scaffold itself under CC BY 4.0, at NAF's
+  direction, so other clubs may reuse it with attribution.
+- **Sections/Files Affected**: `LICENSE` (new), `README.md` and `CLAUDE.md` (instantiation
+  step and directory tree updated to say the license is replaced rather than added)
+- **Nature of Contribution**: Scaffolding. The CC BY 4.0 legal text was retrieved verbatim
+  from https://creativecommons.org/licenses/by/4.0/legalcode.txt rather than reproduced
+  from memory.
+- **Human Review Status**: Reviewed and verified — license choice directed by NAF
+- **Git Hash**: [pending]

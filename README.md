@@ -57,7 +57,8 @@ click **Use this template** on the GitHub repository page.
    ```
    `ai-governance.md` and `amateur-radio-operations.md` stay in every club project.
 
-4. **Add a `LICENSE`.** Software the club wants others to reuse: MIT or BSD-3-Clause.
+4. **Replace the `LICENSE`.** The template itself is CC BY 4.0; an instantiated project
+   picks its own. Software the club wants others to reuse: MIT or BSD-3-Clause.
    Documentation and outreach material: CC BY 4.0. Ask the advisor if the work is
    grant-funded, since some awards carry licensing terms.
 
@@ -87,6 +88,7 @@ click **Use this template** on the GitHub repository page.
 | `.claude/commands/commit.md` | The `/commit` slash command: logs the AI session, commits submodules first, then the main repo |
 | `ai/ai_usage_log.md` | Append-only log of every substantive AI-assisted session |
 | `.gitignore` | Build artifacts, secrets, and bulk data for Python, LaTeX, and web projects |
+| `LICENSE` | CC BY 4.0, covering the scaffold itself. Replace it with the project's own license. |
 
 ## The Non-Negotiables
 
