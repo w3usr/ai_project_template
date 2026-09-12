@@ -76,4 +76,4 @@ carries the actual running model ID.
   from https://creativecommons.org/licenses/by/4.0/legalcode.txt rather than reproduced
   from memory.
 - **Human Review Status**: Reviewed and verified — license choice directed by NAF
-- **Git Hash**: [pending]
+- **Git Hash**: a64c44f
