@@ -64,4 +64,4 @@ carries the actual running model ID.
 - **Human Review Status**: Pending review — the Part 97 section citations in
   `.claude/rules/amateur-radio-operations.md`, and the club roles named in `CLAUDE.md`,
   need verification by the trustee or advisor before this template is used for a real project
-- **Git Hash**: [pending]
+- **Git Hash**: f745d39
