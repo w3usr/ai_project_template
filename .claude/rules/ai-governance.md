@@ -6,6 +6,15 @@ Club work carries the University of Scranton's name. Careless AI use here risks 
 standing with the University, with grant funders, and with the amateur radio community.
 Treat what follows as hard constraints.
 
+## Prerequisite: The Signed Agreement
+
+Every club member signs the **HamSCI Project Research Group Generative AI Use Agreement**
+before using a generative AI tool on a club project. The form lives in
+`docs/ai_policy_agreement/` and is the condition of access to the tools.
+
+A member who has not signed it does not run AI-assisted work on this project. If you are not
+sure whether yours is on file, ask the faculty advisor before you start.
+
 ## Applicable Policies (Always)
 
 ### 1. University of Scranton AI Policy (September 2025)
@@ -13,7 +22,10 @@ Treat what follows as hard constraints.
 - Human oversight and review of all AI-generated content is required before it is published,
   submitted, printed, or sent
 - Do not use AI to misrepresent authorship or intellectual contribution
-- Ethical use aligned with University academic integrity standards
+- Ethical use aligned with University academic integrity standards, and mission alignment
+  with Jesuit values
+
+Full policy: https://www.scranton.edu/Governance/artificial-intelligence-policy_september-2025.pdf
 
 **Club work is not coursework.** If any part of a club project will also be submitted for
 academic credit (an independent study, a capstone, a course project, a thesis), the

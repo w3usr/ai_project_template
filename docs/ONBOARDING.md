@@ -8,6 +8,39 @@ again.
 
 ---
 
+## First: sign the AI use agreement
+
+**You sign the Generative AI Use Agreement before you use Claude or any other generative AI
+tool on a club project.** This is a prerequisite, not paperwork to catch up on later. Access
+to these tools comes through the HamSCI project, and the signed agreement is the condition of
+that access.
+
+The form is in [`ai_policy_agreement/`](ai_policy_agreement/), as both PDF and Word:
+**HamSCI Project Research Group, Generative AI Use Agreement**, updated 15 January 2026.
+
+Read the form. In summary, you are certifying that:
+
+- You have read and will comply with the **University of Scranton AI Policy**, including its
+  requirements for ethical use, transparency, privacy protection, and mission alignment with
+  Jesuit values.
+- Per **NSF and NASA** requirements: you will disclose AI use including tool name, version,
+  and date and time; you understand generative AI creates risks of fabrication, falsification,
+  and plagiarism; **you are responsible for the accuracy and authenticity of all research
+  content, including AI-generated material**; and you will not upload ITAR/EAR-restricted or
+  other confidential or protected material to publicly accessible AI systems.
+- You understand that **material you upload to these systems can potentially be exposed to
+  the public.**
+- You will follow **HamSCI group practice**: document and cite all AI use in NASA format,
+  upload only data you have permission to upload, verify every output, and ask Dr. Frissell
+  when you are uncertain.
+
+Print it, sign it, date it, and return it to {{ADVISOR NAME, CALLSIGN}} by
+{{HOW TO RETURN IT: in person at a meeting, scanned to an address, etc.}}.
+
+The rest of this page assumes that is done.
+
+---
+
 ## What you are looking at
 
 This repository holds a club project: software, a document, station notes, website source, a
@@ -69,6 +102,8 @@ it; the only real mistake is the silent one.
 ---
 
 ## Your first fifteen minutes
+
+Sign and return the AI use agreement first, if you have not already. Then:
 
 ```bash
 # 1. Clone the project (ask the project lead for the URL)
@@ -153,6 +188,7 @@ suggests. Understanding beats copy-pasting, especially here.
 | Station access, club equipment, using the club callsign | The trustee or faculty advisor |
 | "Are we allowed to do this?" | The trustee or faculty advisor, before you do it |
 | AI policy, disclosure, whether something needs logging | The faculty advisor |
+| The AI use agreement: getting a copy, returning a signed one | The faculty advisor |
 | "I think I committed something I shouldn't have" | The project lead and the advisor, immediately |
 
 Asking early is always cheaper than fixing later. Nobody expects you to know this already.

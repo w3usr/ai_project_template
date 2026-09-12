@@ -120,3 +120,19 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit and deletion, at NAF's direction
 - **Human Review Status**: Reviewed and verified; scope of the removal directed by NAF
 - **Git Hash**: 3edc7ba
+
+## [2026-09-12 14:06 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Make the signed Generative AI Use Agreement an explicit prerequisite
+  in the onboarding document and across the template, and commit the agreement form itself.
+- **Sections/Files Affected**: `docs/ai_policy_agreement/` (HamSCI agreement PDF and DOCX,
+  supplied by NAF, now tracked); `docs/ONBOARDING.md` (new opening section "First: sign the
+  AI use agreement", summarizing the form's certifications; signing added to the
+  first-fifteen-minutes checklist and to the who-to-ask table); `.claude/rules/ai-governance.md`
+  (new "Prerequisite: The Signed Agreement" section; Scranton policy URL and Jesuit mission
+  alignment added from the form); `CLAUDE.md` (directory tree and AI Governance section);
+  `README.md` (pitch, file table, and placeholder-replacement step)
+- **Nature of Contribution**: Edit. The summary of the agreement's terms was taken from the
+  text of `HamSCI_AI_Policy_Agreement.pdf` rather than written from memory.
+- **Human Review Status**: Reviewed and verified against the source document
+- **Git Hash**: [pending]

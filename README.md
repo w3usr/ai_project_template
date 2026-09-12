@@ -8,8 +8,9 @@ The template does two things:
 1. Keeps club work compliant with University of Scranton, HamSCI, NASA, NSF, and grant-funder
    policies on generative AI, through a mandatory session log and a `/commit` workflow that
    enforces it.
-2. Gives new club members a fifteen-minute on-ramp in [`docs/ONBOARDING.md`](docs/ONBOARDING.md)
-   so they can contribute without having used git or Claude Code before.
+2. Gives new club members a fifteen-minute on-ramp in [`docs/ONBOARDING.md`](docs/ONBOARDING.md),
+   starting with the Generative AI Use Agreement they sign before using AI tools, so they can
+   contribute without having used git or Claude Code before.
 
 The same scaffold supports:
 
@@ -32,12 +33,14 @@ click **Use this template** on the GitHub repository page.
 ## After Instantiation
 
 1. **Replace placeholders.** Search the repo for `{{` and replace every `{{PLACEHOLDER}}` in
-   `CLAUDE.md`, `.claude/rules/ai-governance.md`, and `ai/ai_usage_log.md`:
+   `CLAUDE.md`, `docs/ONBOARDING.md`, `.claude/rules/ai-governance.md`, and
+   `ai/ai_usage_log.md`:
    ```bash
    grep -rn '{{' . --exclude-dir=.git
    ```
    Common ones: `{{PROJECT_NAME}}`, `{{PROJECT_TITLE}}`, `{{REPO_NAME}}`, `{{PROJECT_PERIOD}}`,
-   the project lead, the advisor, the trustee, and `{{FUNDER}}`.
+   the project lead, the advisor, the trustee, `{{FUNDER}}`, and in `docs/ONBOARDING.md`,
+   who a signed AI use agreement goes back to and how.
 
    Then clear `ai/ai_usage_log.md` of every entry below its append marker. Those entries
    belong to the template repository, and the new project's log starts empty.
@@ -81,7 +84,8 @@ click **Use this template** on the GitHub repository page.
 | Path | Purpose |
 |---|---|
 | `CLAUDE.md` | Project instructions Claude Code reads automatically, with placeholders, the visibility decision, and the never-commit list |
-| `docs/ONBOARDING.md` | Student-facing on-ramp: the three things that matter, a first-fifteen-minutes checklist, the working loop, and who to ask |
+| `docs/ONBOARDING.md` | Student-facing on-ramp: the signing gate, the things that matter, a first-fifteen-minutes checklist, the working loop, and who to ask |
+| `docs/ai_policy_agreement/` | The HamSCI Generative AI Use Agreement, signed before a member uses AI tools on a club project |
 | `.claude/rules/ai-governance.md` | Scranton, HamSCI, NASA, NSF, and grant-funder AI policy; logging requirements; disclosure table; FERPA |
 | `.claude/rules/web-development.md` | Content accuracy, University identity, accessibility, secrets, workflow |
 | `.claude/rules/latex-writing.md` | Citation integrity, crediting students and funders, figures, build hygiene |

@@ -67,7 +67,8 @@ directories to match the project. The scaffold expects:
 |-- ai/
 |   `-- ai_usage_log.md           <- mandatory AI session log
 |-- docs/
-|   `-- ONBOARDING.md             <- read this first
+|   |-- ONBOARDING.md             <- read this first
+|   `-- ai_policy_agreement/      <- sign before using AI tools
 `-- {{PROJECT-SPECIFIC FOLDERS}}  <- e.g. src/, station/, web/, outreach/, logs/, hardware/
 ```
 
@@ -88,6 +89,9 @@ The `/commit` workflow auto-detects submodules via `git submodule status`.
 ## AI Governance
 
 All AI-assisted work on this project must comply with `.claude/rules/ai-governance.md`.
+
+**Before any of it: sign the Generative AI Use Agreement in `docs/ai_policy_agreement/`.**
+Members who have not signed it do not run AI-assisted work on this project.
 
 One thing is non-negotiable: **every substantive AI session is logged in
 `ai/ai_usage_log.md` before the work is committed.** Use the `/commit` command, which does the
