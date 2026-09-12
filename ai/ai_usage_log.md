@@ -147,4 +147,4 @@ carries the actual running model ID.
   (placeholder-replacement step, which no longer needs to mention the agreement)
 - **Nature of Contribution**: Edit, at NAF's direction
 - **Human Review Status**: Reviewed and verified
-- **Git Hash**: [pending]
+- **Git Hash**: c9aa3f1
