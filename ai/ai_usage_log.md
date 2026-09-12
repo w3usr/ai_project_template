@@ -135,4 +135,4 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit. The summary of the agreement's terms was taken from the
   text of `HamSCI_AI_Policy_Agreement.pdf` rather than written from memory.
 - **Human Review Status**: Reviewed and verified against the source document
-- **Git Hash**: [pending]
+- **Git Hash**: 1248074
