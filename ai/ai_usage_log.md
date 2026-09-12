@@ -136,3 +136,15 @@ carries the actual running model ID.
   text of `HamSCI_AI_Policy_Agreement.pdf` rather than written from memory.
 - **Human Review Status**: Reviewed and verified against the source document
 - **Git Hash**: 1248074
+
+## [2026-09-12 14:08 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Address signed AI use agreements to "a W3USR faculty advisor" rather
+  than to a named-advisor placeholder, per NAF: the recipient may be him, his co-advisor
+  Dr. Navid Shahrouzi, or a future advisor.
+- **Sections/Files Affected**: `docs/ONBOARDING.md` (return line and who-to-ask row),
+  `.claude/rules/ai-governance.md` (prerequisite section), `README.md`
+  (placeholder-replacement step, which no longer needs to mention the agreement)
+- **Nature of Contribution**: Edit, at NAF's direction
+- **Human Review Status**: Reviewed and verified
+- **Git Hash**: [pending]

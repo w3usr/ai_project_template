@@ -12,8 +12,9 @@ Every club member signs the **HamSCI Project Research Group Generative AI Use Ag
 before using a generative AI tool on a club project. The form lives in
 `docs/ai_policy_agreement/` and is the condition of access to the tools.
 
-A member who has not signed it does not run AI-assisted work on this project. If you are not
-sure whether yours is on file, ask the faculty advisor before you start.
+A member who has not signed it does not run AI-assisted work on this project. Signed forms
+go to a W3USR faculty advisor. If you are not sure whether yours is on file, ask before you
+start.
 
 ## Applicable Policies (Always)
 

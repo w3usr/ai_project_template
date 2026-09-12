@@ -33,14 +33,12 @@ click **Use this template** on the GitHub repository page.
 ## After Instantiation
 
 1. **Replace placeholders.** Search the repo for `{{` and replace every `{{PLACEHOLDER}}` in
-   `CLAUDE.md`, `docs/ONBOARDING.md`, `.claude/rules/ai-governance.md`, and
-   `ai/ai_usage_log.md`:
+   `CLAUDE.md`, `.claude/rules/ai-governance.md`, and `ai/ai_usage_log.md`:
    ```bash
    grep -rn '{{' . --exclude-dir=.git
    ```
    Common ones: `{{PROJECT_NAME}}`, `{{PROJECT_TITLE}}`, `{{REPO_NAME}}`, `{{PROJECT_PERIOD}}`,
-   the project lead, the advisor, the trustee, `{{FUNDER}}`, and in `docs/ONBOARDING.md`,
-   who a signed AI use agreement goes back to and how.
+   the project lead, the advisor, the trustee, and `{{FUNDER}}`.
 
    Then clear `ai/ai_usage_log.md` of every entry below its append marker. Those entries
    belong to the template repository, and the new project's log starts empty.

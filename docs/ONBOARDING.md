@@ -34,8 +34,7 @@ Read the form. In summary, you are certifying that:
   upload only data you have permission to upload, verify every output, and ask Dr. Frissell
   when you are uncertain.
 
-Print it, sign it, date it, and return it to {{ADVISOR NAME, CALLSIGN}} by
-{{HOW TO RETURN IT: in person at a meeting, scanned to an address, etc.}}.
+Print it, sign it, date it, and return it to a W3USR faculty advisor.
 
 The rest of this page assumes that is done.
 
@@ -188,7 +187,7 @@ suggests. Understanding beats copy-pasting, especially here.
 | Station access, club equipment, using the club callsign | The trustee or faculty advisor |
 | "Are we allowed to do this?" | The trustee or faculty advisor, before you do it |
 | AI policy, disclosure, whether something needs logging | The faculty advisor |
-| The AI use agreement: getting a copy, returning a signed one | The faculty advisor |
+| The AI use agreement: getting a copy, returning a signed one | A W3USR faculty advisor |
 | "I think I committed something I shouldn't have" | The project lead and the advisor, immediately |
 
 Asking early is always cheaper than fixing later. Nobody expects you to know this already.
