@@ -78,7 +78,7 @@ carries the actual running model ID.
 - **Human Review Status**: Reviewed and verified — license choice directed by NAF
 - **Git Hash**: a64c44f
 
-## [2026-09-12 13:41 UTC]
+## [2026-09-12 13:39 UTC]
 - **Tool**: Claude (Anthropic), claude-opus-5
 - **Session Purpose**: Fix license detection. GitHub reported the repository license as
   NOASSERTION because a hand-written preamble preceded the canonical CC BY 4.0 text in
