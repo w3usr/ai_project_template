@@ -179,4 +179,4 @@ carries the actual running model ID.
   `.claude/rules/web-development.md` (settings cross-reference removed)
 - **Nature of Contribution**: Edit, at NAF's direction
 - **Human Review Status**: Reviewed and verified
-- **Git Hash**: [pending]
+- **Git Hash**: 4e494e2
