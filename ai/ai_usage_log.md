@@ -1,4 +1,4 @@
-# AI Usage Log — {{PROJECT_NAME}}
+# AI Usage Log: {{PROJECT_NAME}}
 
 A project of the University of Scranton Amateur Radio Club (W3USR).
 
@@ -34,7 +34,7 @@ carries the actual running model ID.
 
 <!-- Append new entries below this line, newest at the bottom. -->
 
-## [EXAMPLE — delete this entry] [2026-09-01 19:04 EDT]
+## [EXAMPLE: delete this entry] [2026-09-01 19:04 EDT]
 - **Tool**: Claude (Anthropic), claude-opus-5
 - **Session Purpose**: Draft the station setup page for the club website and verify the
   equipment list against the shack inventory sheet.
@@ -61,7 +61,7 @@ carries the actual running model ID.
   `docs/ONBOARDING.md` (new). Git remote repointed to `git@github.com:w3usr/ai_project_template.git`.
 - **Nature of Contribution**: Draft and scaffolding; policy text drafted from the prior
   template and from the applicable institutional, funder, and FCC policies
-- **Human Review Status**: Pending review — the Part 97 section citations in
+- **Human Review Status**: Pending review: the Part 97 section citations in
   `.claude/rules/amateur-radio-operations.md`, and the club roles named in `CLAUDE.md`,
   need verification by the trustee or advisor before this template is used for a real project
 - **Git Hash**: f745d39
@@ -75,7 +75,7 @@ carries the actual running model ID.
 - **Nature of Contribution**: Scaffolding. The CC BY 4.0 legal text was retrieved verbatim
   from https://creativecommons.org/licenses/by/4.0/legalcode.txt rather than reproduced
   from memory.
-- **Human Review Status**: Reviewed and verified — license choice directed by NAF
+- **Human Review Status**: Reviewed and verified; license choice directed by NAF
 - **Git Hash**: a64c44f
 
 ## [2026-09-12 13:39 UTC]
@@ -90,3 +90,14 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit
 - **Human Review Status**: Reviewed and verified
 - **Git Hash**: 1813961
+
+## [2026-09-12 13:39 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Punctuation sweep of the template's own files, replacing em dashes
+  with the colon or semicolon that names the relationship, so the scaffold other projects
+  copy is internally consistent.
+- **Sections/Files Affected**: `ai/ai_usage_log.md` (title, example-entry label, two review
+  status lines), `.claude/commands/commit.md` (title)
+- **Nature of Contribution**: Edit
+- **Human Review Status**: Reviewed and verified
+- **Git Hash**: [pending]

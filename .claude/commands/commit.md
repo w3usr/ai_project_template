@@ -1,4 +1,4 @@
-# /commit — AI-Assisted Commit Workflow (W3USR)
+# /commit: AI-Assisted Commit Workflow (W3USR)
 
 Run this any time you finish a substantive AI-assisted work session in a W3USR project.
 
