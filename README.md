@@ -3,14 +3,12 @@
 A starter scaffold for AI-assisted projects of the **University of Scranton Amateur Radio
 Club (W3USR)**.
 
-The template does three things:
+The template does two things:
 
 1. Keeps club work compliant with University of Scranton, HamSCI, NASA, NSF, and grant-funder
    policies on generative AI, through a mandatory session log and a `/commit` workflow that
    enforces it.
-2. Keeps AI clear of the club's FCC license obligations, through an always-on operating rule
-   file built around the control operator requirement.
-3. Gives new club members a fifteen-minute on-ramp in [`docs/ONBOARDING.md`](docs/ONBOARDING.md)
+2. Gives new club members a fifteen-minute on-ramp in [`docs/ONBOARDING.md`](docs/ONBOARDING.md)
    so they can contribute without having used git or Claude Code before.
 
 The same scaffold supports:
@@ -19,7 +17,7 @@ The same scaffold supports:
 - **Web projects**: the club website, event pages, outreach material
 - **Writing projects**: papers, posters, grant applications, reports, newsletters, typically
   with an `overleaf/` submodule
-- **Station and hardware projects**: antenna builds, station documentation, RF exposure records
+- **Station and hardware projects**: antenna builds, station documentation, equipment records
 - **Mixed projects**: any combination
 
 ## Use as a GitHub Template
@@ -55,7 +53,11 @@ click **Use this template** on the GitHub repository page.
    rm .claude/rules/latex-writing.md     # no LaTeX
    rm .claude/rules/python-code.md       # no Python
    ```
-   `ai-governance.md` and `amateur-radio-operations.md` stay in every club project.
+   `ai-governance.md` stays in every club project.
+
+   Projects with needs of their own add their own rule file. A station or on-air project,
+   for instance, is the right place to write down its operating constraints, because those
+   constraints depend on the project.
 
 4. **Replace the `LICENSE`.** The template itself is CC BY 4.0; an instantiated project
    picks its own. Software the club wants others to reuse: MIT or BSD-3-Clause.
@@ -80,25 +82,22 @@ click **Use this template** on the GitHub repository page.
 |---|---|
 | `CLAUDE.md` | Project instructions Claude Code reads automatically, with placeholders, the visibility decision, and the never-commit list |
 | `docs/ONBOARDING.md` | Student-facing on-ramp: the three things that matter, a first-fifteen-minutes checklist, the working loop, and who to ask |
-| `.claude/rules/ai-governance.md` | Scranton, FCC, HamSCI, NASA, NSF, and grant-funder AI policy; logging requirements; disclosure table; FERPA |
-| `.claude/rules/amateur-radio-operations.md` | Control operator responsibility, Part 97 sections that come up in club projects, logging integrity, club callsign use, station safety. Applies to every project. |
+| `.claude/rules/ai-governance.md` | Scranton, HamSCI, NASA, NSF, and grant-funder AI policy; logging requirements; disclosure table; FERPA |
 | `.claude/rules/web-development.md` | Content accuracy, University identity, accessibility, secrets, workflow |
 | `.claude/rules/latex-writing.md` | Citation integrity, crediting students and funders, figures, build hygiene |
-| `.claude/rules/python-code.md` | Code standards, code that touches the radio, log data handling, commit workflow |
+| `.claude/rules/python-code.md` | Code standards, data handling, commit workflow |
 | `.claude/commands/commit.md` | The `/commit` slash command: logs the AI session, commits submodules first, then the main repo |
 | `ai/ai_usage_log.md` | Append-only log of every substantive AI-assisted session |
 | `.gitignore` | Build artifacts, secrets, and bulk data for Python, LaTeX, and web projects |
 | `LICENSE`, `NOTICE` | CC BY 4.0, covering the scaffold itself. Replace both with the project's own license. |
 
-## The Non-Negotiables
+## The Non-Negotiable
 
-Every project from this template inherits two rules that do not bend:
+Every project from this template inherits one rule that does not bend:
 
-- **A licensed human control operator is responsible for every transmission.** AI assists with
-  writing, analysis, code, and design. It does not operate the station.
-- **Every substantive AI session is logged before the work is committed.** Run `/commit`.
+**Every substantive AI session is logged before the work is committed.** Run `/commit`.
 
-Everything else in here exists to make those two easy to follow.
+Everything else in here exists to make that easy to follow.
 
 ## Maintaining This Template
 

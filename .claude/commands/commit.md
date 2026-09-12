@@ -32,7 +32,6 @@ Before drafting anything, look at the changed files for material that must never
 - credentials, API keys, `.env` files with real values, station or service passwords
 - student records, rosters tied to student IDs, member addresses or phone numbers
 - building access details, alarm codes, tower or rooftop access procedures
-- real log files being modified in place, or synthetic QSOs mixed into a real log
 - photographs of identifiable people without permission
 
 If any appear, stop and raise it with the user before committing.

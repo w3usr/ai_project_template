@@ -21,24 +21,18 @@ responsible for the result.
 | File | Read it when |
 |---|---|
 | `.claude/rules/ai-governance.md` | Before your first AI-assisted session. Always applies. |
-| `.claude/rules/amateur-radio-operations.md` | Before anything that touches the station, a log, or a transmit path. Always applies. |
 | `.claude/rules/web-development.md` | Working on the website or any web page |
 | `.claude/rules/latex-writing.md` | Writing a paper, poster, or report in LaTeX |
 | `.claude/rules/python-code.md` | Writing Python |
 
+Some projects add rule files of their own beyond the ones above. Where a project does, its
+`CLAUDE.md` says so, and you read those too.
+
 ---
 
-## The three things that matter most
+## The two things that matter most
 
-### 1. A licensed human is responsible for everything that goes on the air
-
-AI can draft a net script or write software that talks to a radio. It cannot be the control
-operator. A licensed club member reads and approves anything before it is transmitted, and
-that person is answerable for it under the club's FCC license. The full rules are in
-`.claude/rules/amateur-radio-operations.md`, and they are federal regulation rather than club
-preference.
-
-### 2. Every substantive AI session gets logged before you commit
+### 1. Every substantive AI session gets logged before you commit
 
 The club keeps `ai/ai_usage_log.md` as an honest record of what AI did on this project. This
 is required by University of Scranton policy, by the HamSCI Generative AI Use Agreement, and
@@ -51,7 +45,7 @@ entry, show it to you for confirmation, append it, and then commit.
 "Substantive" means AI produced or reshaped something that ends up in the repository. Asking
 Claude what a git command does needs no entry.
 
-### 3. Some things never get committed
+### 2. Some things never get committed
 
 Whatever the repository's visibility:
 
@@ -62,7 +56,7 @@ Whatever the repository's visibility:
   values, university logins
 - Building access details, alarm codes, tower or rooftop access procedures
 - Photographs of identifiable people without their permission
-- Fabricated log entries or QSOs of any kind
+- Fabricated records of any kind
 
 Callsigns and names are public in the FCC database and are fine to publish. Combining a
 member's callsign with their address or daily schedule is not.
@@ -119,9 +113,9 @@ what we say they are.
 A few habits that keep that true:
 
 - **Verify before you publish.** AI will produce a confident, specific, wrong answer about
-  Part 97, about contest rules, about our club's history, and about what a paper said. Check
-  it against the actual source. `ecfr.gov` for the rules, the sponsor's page for contest
-  rules, a club officer for club facts, the paper itself for what a paper said.
+  regulations, about our club's history, and about what a paper said. Check it against the
+  actual source: the issuing body for a rule, a club officer for club facts, the paper itself
+  for what a paper said.
 - **Say what AI did.** Understating it is the failure mode that damages people. Overstating it
   costs nothing.
 - **Never let AI make something up to fill a gap.** An obvious `{{TBD}}` in a draft is a
@@ -156,8 +150,8 @@ suggests. Understanding beats copy-pasting, especially here.
 | Question | Ask |
 |---|---|
 | This repository, the code, the document | The project lead named in `CLAUDE.md` |
-| Station access, on-air operating, using the club callsign | The trustee or faculty advisor |
-| Licensing, Part 97, "are we allowed to do this?" | The trustee or faculty advisor, before you do it |
+| Station access, club equipment, using the club callsign | The trustee or faculty advisor |
+| "Are we allowed to do this?" | The trustee or faculty advisor, before you do it |
 | AI policy, disclosure, whether something needs logging | The faculty advisor |
 | "I think I committed something I shouldn't have" | The project lead and the advisor, immediately |
 

@@ -101,3 +101,22 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit
 - **Human Review Status**: Reviewed and verified
 - **Git Hash**: c769950
+
+## [2026-09-12 13:58 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Remove the FCC operating governance from the general template, at
+  NAF's direction. Operating constraints do not apply to every club project and belong in a
+  per-project rule file where they are required.
+- **Sections/Files Affected**: `.claude/rules/amateur-radio-operations.md` (deleted);
+  `README.md` (pitch reduced to two items, rule-file table and prune list updated,
+  "Non-Negotiables" reduced to the AI log alone); `CLAUDE.md` (directory tree, AI Governance
+  section reduced to the log requirement plus a placeholder for project-specific rules);
+  `.claude/rules/ai-governance.md` (FCC section removed and sections renumbered, "AI Is Not
+  an Author" narrowed, project-specific-constraints placeholder added);
+  `docs/ONBOARDING.md` ("three things" reduced to two, rule table and who-to-ask updated);
+  `.claude/rules/python-code.md` ("Code That Touches the Radio" replaced with a general
+  "Side Effects" section); `.claude/commands/commit.md` (log-file bullet removed from the
+  pre-staging check)
+- **Nature of Contribution**: Edit and deletion, at NAF's direction
+- **Human Review Status**: Reviewed and verified; scope of the removal directed by NAF
+- **Git Hash**: [pending]

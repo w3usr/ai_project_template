@@ -61,7 +61,6 @@ directories to match the project. The scaffold expects:
 |   |-- commands/commit.md        <- /commit workflow
 |   `-- rules/
 |       |-- ai-governance.md          <- always applies
-|       |-- amateur-radio-operations.md <- always applies
 |       |-- web-development.md        <- delete if no web work
 |       |-- latex-writing.md          <- delete if no LaTeX
 |       `-- python-code.md            <- delete if no Python
@@ -90,13 +89,12 @@ The `/commit` workflow auto-detects submodules via `git submodule status`.
 
 All AI-assisted work on this project must comply with `.claude/rules/ai-governance.md`.
 
-Two things are non-negotiable:
+One thing is non-negotiable: **every substantive AI session is logged in
+`ai/ai_usage_log.md` before the work is committed.** Use the `/commit` command, which does the
+logging and committing in the right order.
 
-1. **Every substantive AI session is logged in `ai/ai_usage_log.md` before the work is
-   committed.** Use the `/commit` command, which does the logging and committing in order.
-2. **A licensed human control operator is responsible for anything that reaches the air.**
-   See `.claude/rules/amateur-radio-operations.md`. AI may help write, analyze, and build.
-   It never operates the station.
+{{If this project has constraints of its own that AI work must respect, write them into a
+rule file under `.claude/rules/` and name it here.}}
 
 ## Getting Help
 

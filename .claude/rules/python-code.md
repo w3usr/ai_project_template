@@ -20,20 +20,17 @@ satellite pass prediction, rig or rotator control, dashboards, data plotting.
 - Write code a club member who joins next semester can read. Name things plainly, and comment
   the parts that are non-obvious rather than the parts that are obvious.
 
-## Code That Touches the Radio
-Anything that controls a rig, a rotator, an amplifier, or a transmit path is covered by
-`.claude/rules/amateur-radio-operations.md`. In short: a licensed control operator supervises
-it, it identifies per 97.119, and it does not transmit on a schedule of its own until the
-control method has been worked out with the trustee.
-
-- Default to receive-only and to dry-run modes. Make transmitting an explicit opt-in, never
+## Side Effects
+- Default to dry-run. Make an action that reaches the outside world an explicit opt-in, never
   the default behavior of a script someone runs to see what it does.
-- Guard destructive or irreversible actions (uploading a log, sending a spot, keying a
-  transmitter) behind a confirmation.
+- Guard destructive or irreversible actions (uploading data, posting to a service, writing
+  over a record) behind a confirmation.
+- Where a project's hardware or external systems impose constraints of their own, write them
+  into a project rule file under `.claude/rules/` and follow it.
 
 ## Data Handling
-- Copy a real log before operating on it; never edit the original in place
-- Keep test fixtures clearly named as fixtures so no one mistakes them for real contacts
+- Copy a real data file before operating on it; never edit the original in place
+- Keep test fixtures clearly named as fixtures so no one mistakes them for real records
 - Bulk data stays out of git; fetch it from its archive or regenerate it from a committed
   script, and record where it came from
 
