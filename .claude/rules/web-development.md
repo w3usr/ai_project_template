@@ -48,8 +48,11 @@ The site is a university club's public face; accessibility is a requirement, not
 - Video and audio carry captions or a transcript
 
 ## Security and Secrets
-- Never commit API keys, database credentials, SMTP passwords, CMS admin logins, or analytics
-  tokens. Use environment variables and a gitignored `.env`.
+- Default to environment variables and a gitignored `.env` for API keys, database
+  credentials, SMTP passwords, CMS logins, and analytics tokens. Where a private repository
+  deliberately holds deploy configuration, `CLAUDE.md` records that decision and
+  `.claude/settings.json` denies Claude read access to those paths.
+- A personal login or personal API key is never committed, at any visibility.
 - Never commit a database dump that contains member data.
 - Keep dependencies current, and treat a published advisory in a dependency as work to do.
 - Validate and escape anything a visitor submits. A club contact form is still a public input.

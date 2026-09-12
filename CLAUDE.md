@@ -29,16 +29,43 @@ above, because the answer changes what may be committed.
 | Choose **public** when | Choose **private** when |
 |---|---|
 | The work is meant to be shared: club website source, station how-to guides, outreach material, open-source tools | The repo holds unpublished research data, an in-progress grant application, or draft material the club is not ready to stand behind |
-| Other clubs or HamSCI could reuse it | It holds anything covered by the "never commit" list below |
+| Other clubs or HamSCI could reuse it | It must hold the keys, tokens, or host details a deploy or development setup needs |
 | It is a build log or design the club wants to publish | Member contact information beyond a callsign is unavoidable in the work |
 
-**Never commit, in a repository of either visibility:**
+**Never commit, at any visibility:**
 - Student records, grades, rosters tied to student IDs, or anything else covered by FERPA
 - Member home addresses, phone numbers, personal email addresses, or dates of birth
-- Credentials of any kind: radio remote-access passwords, LoTW or Club Log credentials,
-  API keys, `.env` files with real values, Wi-Fi or VPN secrets, university logins
-- Building access details, alarm codes, or rooftop/tower access procedures
+- **Personal credentials**: anyone's university login, personal account password, or personal
+  API key. A person's credential is theirs, and it opens doors well beyond this project.
 - Photographs of identifiable people without their permission
+
+**Never commit to a public repository:**
+- Credentials, keys, tokens, or access information of any kind
+- Building access details, alarm codes, or rooftop and tower access procedures
+
+**A private repository may hold the access information a project needs to deploy and
+develop**, where that has been carefully and deliberately decided. Deploy keys, service
+tokens, host names and paths, and a `.env` for a staging environment are legitimate contents
+of a private orchestrator repository, and pretending otherwise pushes them somewhere worse.
+
+Carefully and deliberately means:
+
+- **The project lead and a W3USR faculty advisor decide together, in advance.** A member does
+  not add a credential on their own judgement mid-task.
+- **The credential belongs to the project.** A deploy key or service account scoped to one
+  target, never a person's own login.
+- **Scope it to what the deploy needs** and no further. A key that can push to one host beats
+  one that can administer the account.
+- **Record what is in there**, in the repository, so the next person can find every credential
+  when it is time to rotate them.
+- **Rotate on turnover.** Members graduate. Rotate when someone with access leaves the
+  project, and on any suspicion of exposure.
+- **The repository stays private until you rotate.** Git history keeps a committed secret
+  after the file is deleted, so this repository cannot simply be flipped to public later:
+  rotate everything first, then flip.
+- **Keep it out of the AI's reach.** `.claude/settings.json` carries `permissions.deny` rules
+  for the paths that hold secrets, so Claude Code does not read them into a session. Extend
+  those rules whenever you add a new secret path.
 
 Callsigns and names are public information in the FCC ULS database, so publishing a callsign
 is fine. Aggregating a member's callsign with their address, schedule, or dorm is not.

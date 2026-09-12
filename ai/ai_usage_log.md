@@ -148,3 +148,23 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit, at NAF's direction
 - **Human Review Status**: Reviewed and verified
 - **Git Hash**: c9aa3f1
+
+## [2026-09-12 14:25 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Correct the never-commit list, which barred credentials at any
+  visibility. Per NAF, some private club repositories legitimately hold access information:
+  the forthcoming w3usr.org-PRIVATE orchestrator repository needs it for deploy and
+  development. Committing such material is to be "carefully and deliberately decided"
+  rather than prohibited.
+- **Sections/Files Affected**: `CLAUDE.md` (never-commit list split into at-any-visibility,
+  public-only, and a deliberate-decision section with conditions; visibility criteria table
+  updated); `docs/ONBOARDING.md` (student-facing credential bullet); `.claude/settings.json`
+  (`permissions.deny` read rules for `.env`, `.env.*`, `secrets/**`, `*.pem`, `*.key`,
+  `**/credentials.json`); `README.md` (new instantiation step 4 on extending the deny rules,
+  later steps renumbered, file table); `.claude/commands/commit.md` (pre-staging check);
+  `.claude/rules/web-development.md` and `.claude/rules/python-code.md` (secrets guidance)
+- **Nature of Contribution**: Edit, at NAF's direction. Permission-rule syntax verified
+  against the Claude Code documentation at code.claude.com/docs/en/permissions rather than
+  written from memory.
+- **Human Review Status**: Reviewed and verified
+- **Git Hash**: [pending]

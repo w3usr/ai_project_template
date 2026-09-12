@@ -15,8 +15,9 @@ satellite pass prediction, rig or rotator control, dashboards, data plotting.
 ## Code Standards
 - Follow the existing structure; introduce a new abstraction only with a reason you can state
 - Keep `requirements.txt` or `pyproject.toml` current when adding a dependency
-- Never commit credentials, API keys, or station passwords; use environment variables and a
-  gitignored `.env`
+- Default to environment variables and a gitignored `.env` for credentials and API keys.
+  Where a private repository deliberately holds deploy configuration, `CLAUDE.md` records
+  that decision. A personal login is never committed, at any visibility.
 - Write code a club member who joins next semester can read. Name things plainly, and comment
   the parts that are non-obvious rather than the parts that are obvious.
 

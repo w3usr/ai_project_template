@@ -29,7 +29,9 @@ No output from `git submodule foreach` means the repo has no submodules; proceed
 Before drafting anything, look at the changed files for material that must never be committed
 (see `CLAUDE.md` and `.claude/rules/ai-governance.md`):
 
-- credentials, API keys, `.env` files with real values, station or service passwords
+- credentials, API keys, or `.env` files with real values, unless `CLAUDE.md` records a
+  deliberate decision that this private repository holds deploy configuration
+- a personal login or personal API key, which is never committed at any visibility
 - student records, rosters tied to student IDs, member addresses or phone numbers
 - building access details, alarm codes, tower or rooftop access procedures
 - photographs of identifiable people without permission

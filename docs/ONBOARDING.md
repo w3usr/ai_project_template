@@ -84,8 +84,11 @@ Whatever the repository's visibility:
 - Student records of any kind: grades, rosters tied to student IDs, advising notes, anything
   under FERPA
 - Member home addresses, phone numbers, personal email addresses, dates of birth
-- Credentials: station passwords, LoTW or Club Log logins, API keys, `.env` files with real
-  values, university logins
+- Credentials, **unless this project's `CLAUDE.md` says this private repository deliberately
+  holds them.** Some club repositories do: an orchestrator repo needs the keys and host
+  details that make a deploy work. That is decided in advance by the project lead and a
+  faculty advisor and written down. It is never a call you make mid-task. A personal login,
+  yours or anyone's university account, is never committed either way.
 - Building access details, alarm codes, tower or rooftop access procedures
 - Photographs of identifiable people without their permission
 - Fabricated records of any kind
