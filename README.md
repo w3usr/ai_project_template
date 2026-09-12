@@ -88,7 +88,7 @@ click **Use this template** on the GitHub repository page.
 | `.claude/commands/commit.md` | The `/commit` slash command: logs the AI session, commits submodules first, then the main repo |
 | `ai/ai_usage_log.md` | Append-only log of every substantive AI-assisted session |
 | `.gitignore` | Build artifacts, secrets, and bulk data for Python, LaTeX, and web projects |
-| `LICENSE` | CC BY 4.0, covering the scaffold itself. Replace it with the project's own license. |
+| `LICENSE`, `NOTICE` | CC BY 4.0, covering the scaffold itself. Replace both with the project's own license. |
 
 ## The Non-Negotiables
 

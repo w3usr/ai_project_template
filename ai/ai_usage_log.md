@@ -77,3 +77,16 @@ carries the actual running model ID.
   from memory.
 - **Human Review Status**: Reviewed and verified — license choice directed by NAF
 - **Git Hash**: a64c44f
+
+## [2026-09-12 13:41 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5
+- **Session Purpose**: Fix license detection. GitHub reported the repository license as
+  NOASSERTION because a hand-written preamble preceded the canonical CC BY 4.0 text in
+  `LICENSE`, which defeats GitHub's license detection.
+- **Sections/Files Affected**: `LICENSE` (reduced to the canonical CC BY 4.0 text alone),
+  `NOTICE` (new, carrying the copyright line, attribution string, and the note that the
+  scaffold derives from the W2NAF academic template), `README.md` and `CLAUDE.md` (file
+  tables updated)
+- **Nature of Contribution**: Edit
+- **Human Review Status**: Reviewed and verified
+- **Git Hash**: [pending]

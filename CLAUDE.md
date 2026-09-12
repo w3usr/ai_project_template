@@ -53,6 +53,7 @@ directories to match the project. The scaffold expects:
 |-- CLAUDE.md
 |-- README.md
 |-- LICENSE                       <- replace with the project's own; see README
+|-- NOTICE                        <- copyright and attribution
 |-- .gitignore
 |-- .gitmodules                   <- present only if you add submodules
 |-- .claude/
