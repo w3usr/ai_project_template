@@ -167,4 +167,4 @@ carries the actual running model ID.
   against the Claude Code documentation at code.claude.com/docs/en/permissions rather than
   written from memory.
 - **Human Review Status**: Reviewed and verified
-- **Git Hash**: [pending]
+- **Git Hash**: 7252c10
