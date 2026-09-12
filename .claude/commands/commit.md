@@ -1,8 +1,12 @@
-# /commit — AI-Assisted Commit Workflow
+# /commit — AI-Assisted Commit Workflow (W3USR)
 
-Use this command any time you finish a substantive AI-assisted work session.
+Run this any time you finish a substantive AI-assisted work session in a W3USR project.
 
-This workflow handles flat repos (no submodules), single-submodule repos (e.g., Overleaf only), and multi-submodule repos. Submodules are auto-detected from `git submodule status`.
+It logs the AI session first, then commits, in that order. The order is the point: the log is
+the club's record of what AI did, and a commit without one is a gap in that record.
+
+Handles flat repos, single-submodule repos (e.g. Overleaf only), and multi-submodule repos.
+Submodules are auto-detected from `git submodule status`.
 
 ## Steps
 
@@ -10,72 +14,96 @@ This workflow handles flat repos (no submodules), single-submodule repos (e.g., 
 ```bash
 date
 ```
-Use this exact output — never estimate the date/time.
+Use this exact output. Never estimate the date or time.
 
 ### 2. Identify all changes
-Check status across the main repo and every submodule:
 ```bash
 git status
 git submodule foreach 'git status'
-```
-
-Show diff summaries:
-```bash
 git diff --stat
 git submodule foreach 'git diff --stat'
 ```
+No output from `git submodule foreach` means the repo has no submodules; proceed without them.
 
-If `git submodule foreach` produces no output, the repo has no submodules — proceed without them.
+### 3. Check what is about to be staged
+Before drafting anything, look at the changed files for material that must never be committed
+(see `CLAUDE.md` and `.claude/rules/ai-governance.md`):
 
-### 3. Ask the user for session purpose
-Draft a purpose of this session for the AI log. Show it to the user, and ask them to confirm.
+- credentials, API keys, `.env` files with real values, station or service passwords
+- student records, rosters tied to student IDs, member addresses or phone numbers
+- building access details, alarm codes, tower or rooftop access procedures
+- real log files being modified in place, or synthetic QSOs mixed into a real log
+- photographs of identifiable people without permission
 
-### 4. Draft the AI usage log entry
-Use this format. Use the **actual running model ID** in the Tool field (e.g., `claude-opus-4-7`), not a placeholder.
+If any appear, stop and raise it with the user before committing.
+
+### 4. Ask the user for the session purpose
+Draft a one- or two-sentence purpose for the log. Show it to the user and ask them to confirm
+or correct it.
+
+### 5. Draft the AI usage log entry
+Use the **actual running model ID** in the Tool field (e.g. `claude-opus-5`), never a
+placeholder.
 
 ```
 ## [YYYY-MM-DD HH:MM TZ]
 - **Tool**: Claude (Anthropic), <actual-model-id>
 - **Session Purpose**: [user's description]
-- **Sections/Files Affected**: [list changed files and sections]
+- **Sections/Files Affected**: [changed files and sections]
 - **Nature of Contribution**: [Draft / Edit / Analysis / Code generation / Research / etc.]
 - **Human Review Status**: [Reviewed and verified / Partially reviewed / Pending review]
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: [filled in after committing]
 ```
 
-Present the draft to the user. Wait for confirmation or corrections.
+Set **Human Review Status** honestly. "Pending review" is a legitimate and useful value, and
+it is far better than claiming a review that did not happen.
 
-### 5. Append the entry to `ai/ai_usage_log.md`
+Present the draft. Wait for confirmation or corrections.
 
-### 6. Commit in submodules FIRST (if any have changes)
-For each submodule with changes:
+### 6. Append the entry to `ai/ai_usage_log.md`
+
+### 7. Commit in submodules FIRST (if any have changes)
 ```bash
 git -C <submodule-path> add <files>
 git -C <submodule-path> commit -m "[AI-assisted] <description>"
 ```
+Skip this step when there are no submodules or none have changes.
 
-If there are no submodules, or none have changes, skip this step.
-
-### 7. Commit in the main repo
-Stage `ai/ai_usage_log.md`, any updated submodule pointers, and any other changed project files:
+### 8. Commit in the main repo
+Stage `ai/ai_usage_log.md`, any updated submodule pointers, and the other changed files:
 ```bash
 git add ai/ai_usage_log.md <other-files-and-submodule-pointers>
 git commit -m "[AI-assisted] <description>"
 ```
 
-### 8. Fill in the git hash(es)
+### 9. Fill in the git hash(es)
 ```bash
 git log --oneline -1
 ```
-Update the log entry's **Git Hash** field with the main-repo hash and any submodule hashes (e.g., `main=abc1234, overleaf=def5678`).
+Update the entry's **Git Hash** field with the main-repo hash and any submodule hashes
+(e.g. `main=abc1234, overleaf=def5678`).
 
-If updating the hash field requires a follow-up commit, use a non-`[AI-assisted]` commit message such as `Update AI usage log with git hashes`.
+If that needs a follow-up commit, use a plain message without the `[AI-assisted]` prefix, such
+as `Update AI usage log with git hashes`.
 
-### 9. Ask before pushing
-Never push without explicit user instruction.
+### 10. Ask before pushing
+Never push without explicit instruction from the user.
+
+When pushing a repo with submodules, **push the submodule before the parent**. A parent that
+reaches GitHub ahead of its submodule looks correct on the machine that pushed it and breaks
+for everyone who clones. Verify first:
+```bash
+git -C <submodule-path> branch -r --contains HEAD   # empty output = local only; push it first
+```
 
 ## Notes
 
-- The `[AI-assisted]` prefix applies only to commits whose content was produced or substantially shaped with AI assistance. Pure human edits (e.g., the user manually fixes a typo or rewords a sentence) should NOT carry the prefix.
-- Commit submodules with their own `[AI-assisted]` prefix when their content is AI-assisted, separately from the main-repo pointer-bump commit.
-- Use `git add <specific-files>` rather than `git add -A` or `git add .`, to avoid accidentally staging untracked artifacts (build outputs, credentials, large binaries).
+- The `[AI-assisted]` prefix goes on commits whose content was produced or substantially
+  shaped with AI. A purely human edit (the user fixes a typo, rewords a sentence) does not
+  carry it.
+- Submodules get their own `[AI-assisted]` commits where their content is AI-assisted,
+  separately from the parent's pointer-bump commit.
+- Use `git add <specific-files>` rather than `git add -A` or `git add .`, so build output,
+  credentials, and large binaries are not staged by accident.
+- Reference a tracking issue where one exists (`refs #N`, or `closes #N` when declaring the
+  work finished is yours to declare).

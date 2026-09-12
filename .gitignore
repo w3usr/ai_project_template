@@ -9,6 +9,15 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Secrets — never commit real values
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+credentials.json
+
 # Python
 __pycache__/
 *.py[cod]
@@ -20,6 +29,16 @@ env/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
+
+# Node / web build output
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+_site/
+.next/
 
 # LaTeX build artifacts
 *.aux
@@ -38,6 +57,12 @@ env/
 *.nav
 *.snm
 *.vrb
+
+# Bulk data — fetch from its archive or regenerate from a committed script.
+# Uncomment or adjust per project; a tracked ADIF log may be exactly what you want.
+# data/raw/
+# *.h5
+# *.nc
 
 # Claude Code local state
 .claude/settings.local.json

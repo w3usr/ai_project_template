@@ -1,47 +1,104 @@
 # {{PROJECT_NAME}}
 
-## Project Overview
-{{ONE-PARAGRAPH PROJECT DESCRIPTION — what is being written or built, its purpose, and audience.}}
+A project of the **University of Scranton Amateur Radio Club (W3USR)**.
 
-**PI**: {{PI_NAME_AND_AFFILIATION}}
-**Collaborators**: {{COLLABORATORS}}
-**Funder**: {{FUNDER}}{{FUNDING_AMOUNT_OPTIONAL}}
-**Project period**: {{PROJECT_PERIOD}}
+New to this club's repositories? Read [`docs/ONBOARDING.md`](docs/ONBOARDING.md) first.
+
+## Project Overview
+{{ONE-PARAGRAPH DESCRIPTION: what is being built or written, who it serves, and why the club is doing it.}}
+
+**Project type**: {{Station documentation / Club website / Outreach or demo material / Event or contest operation / Software build / Hardware or antenna build / Grant application / Newsletter, poster, or presentation / Other}}
+**Project lead**: {{NAME, CALLSIGN}}
+**Faculty advisor**: {{NAME, CALLSIGN}}
+**Club license trustee**: {{NAME, CALLSIGN}}
+**Other contributors**: {{NAMES AND CALLSIGNS}}
+**Funder**: {{FUNDER, or "Unfunded / club-internal"}}
+**Project period**: {{START to END}}
 
 ## Project Goal
-{{PROJECT_GOAL — 1-3 sentences.}}
+{{1 to 3 sentences. What does "done" look like?}}
+
+## Repository Visibility
+
+**This repository is: {{PUBLIC | PRIVATE}}**, decided by {{NAME}} on {{YYYY-MM-DD}}.
+**Reason**: {{REASON}}
+
+This template sets no default. Decide deliberately at instantiation and record the decision
+above, because the answer changes what may be committed.
+
+| Choose **public** when | Choose **private** when |
+|---|---|
+| The work is meant to be shared: club website source, station how-to guides, outreach material, open-source tools | The repo holds unpublished research data, an in-progress grant application, or draft material the club is not ready to stand behind |
+| Other clubs or HamSCI could reuse it | It holds anything covered by the "never commit" list below |
+| It is a build log or design the club wants to publish | Member contact information beyond a callsign is unavoidable in the work |
+
+**Never commit, in a repository of either visibility:**
+- Student records, grades, rosters tied to student IDs, or anything else covered by FERPA
+- Member home addresses, phone numbers, personal email addresses, or dates of birth
+- Credentials of any kind: radio remote-access passwords, LoTW or Club Log credentials,
+  API keys, `.env` files with real values, Wi-Fi or VPN secrets, university logins
+- Building access details, alarm codes, or rooftop/tower access procedures
+- Photographs of identifiable people without their permission
+
+Callsigns and names are public information in the FCC ULS database, so publishing a callsign
+is fine. Aggregating a member's callsign with their address, schedule, or dorm is not.
 
 ## Repository Structure
-This project starts from the `ai_project_template` scaffold. Add or remove top-level directories to match your project type. The scaffold expects:
+
+This project starts from the W3USR `ai_project_template` scaffold. Add or remove top-level
+directories to match the project. The scaffold expects:
 
 ```
 {{REPO_NAME}}/
-├── CLAUDE.md
-├── README.md
-├── .gitignore
-├── .gitmodules                   ← present only if you add submodules
-├── .claude/
-│   ├── settings.json
-│   ├── commands/commit.md        ← /commit workflow
-│   └── rules/
-│       ├── ai-governance.md
-│       ├── latex-writing.md      ← delete if no LaTeX
-│       └── python-code.md        ← delete if no Python
-├── ai/
-│   └── ai_usage_log.md           ← mandatory AI session log
-└── {{PROJECT-SPECIFIC FOLDERS}}  ← e.g., manuscript/, src/, posters/, proposal/
+|-- CLAUDE.md
+|-- README.md
+|-- LICENSE                       <- add one; see README
+|-- .gitignore
+|-- .gitmodules                   <- present only if you add submodules
+|-- .claude/
+|   |-- settings.json
+|   |-- commands/commit.md        <- /commit workflow
+|   `-- rules/
+|       |-- ai-governance.md          <- always applies
+|       |-- amateur-radio-operations.md <- always applies
+|       |-- web-development.md        <- delete if no web work
+|       |-- latex-writing.md          <- delete if no LaTeX
+|       `-- python-code.md            <- delete if no Python
+|-- ai/
+|   `-- ai_usage_log.md           <- mandatory AI session log
+|-- docs/
+|   `-- ONBOARDING.md             <- read this first
+`-- {{PROJECT-SPECIFIC FOLDERS}}  <- e.g. src/, station/, web/, outreach/, logs/, hardware/
 ```
 
 ## Submodules (optional)
-If your project includes submodules (e.g., an Overleaf manuscript or a separate code repo):
-1. Make changes and commit **inside** the submodule first
-2. Then commit the updated submodule pointer in this repo
-3. Always use `[AI-assisted]` prefix on commits made with AI assistance
-4. Ask before pushing to any remote
+
+If the project includes a submodule (an Overleaf document, the club website repo, a separate
+code repo):
+
+1. Make changes and commit **inside** the submodule first.
+2. Then commit the updated submodule pointer in this repo.
+3. Push the submodule **before** pushing this repo. A parent pushed ahead of its submodule
+   works on your laptop and breaks for everyone who clones it.
+4. Use the `[AI-assisted]` prefix on commits whose content was produced with AI assistance.
+5. Ask the project lead before pushing to any remote.
 
 The `/commit` workflow auto-detects submodules via `git submodule status`.
 
 ## AI Governance
-All AI-assisted work must comply with the policies in `.claude/rules/ai-governance.md`.
-Every substantive AI session must be logged in `ai/ai_usage_log.md` before committing.
-Use the `/commit` command to handle logging and committing in the correct order.
+
+All AI-assisted work on this project must comply with `.claude/rules/ai-governance.md`.
+
+Two things are non-negotiable:
+
+1. **Every substantive AI session is logged in `ai/ai_usage_log.md` before the work is
+   committed.** Use the `/commit` command, which does the logging and committing in order.
+2. **A licensed human control operator is responsible for anything that reaches the air.**
+   See `.claude/rules/amateur-radio-operations.md`. AI may help write, analyze, and build.
+   It never operates the station.
+
+## Getting Help
+
+- Club questions, station access, on-air activity: {{ADVISOR OR TRUSTEE NAME, CALLSIGN, CONTACT}}
+- This repository: {{PROJECT LEAD NAME, CALLSIGN}}
+- Club meeting time and place: {{WHEN AND WHERE}}

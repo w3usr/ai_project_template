@@ -7,24 +7,39 @@ paths:
 ---
 
 # LaTeX Writing Rules
-*Delete this file if your project does not include LaTeX writing.*
+*Delete this file if the project includes no LaTeX.*
 
-Applies to all LaTeX source files in the project (typically under a `manuscript/`, `paper/`, `report/`, or `overleaf/` directory).
+Applies to LaTeX source anywhere in the project, typically under `manuscript/`, `poster/`,
+`report/`, `proposal/`, or an `overleaf/` submodule. Common club uses: a conference poster,
+a HamSCI or ARRL paper, a grant application, a technical report on a station build.
 
-## Document Format
-- Identify the document type up front (paper, annual report, proposal, dissertation, etc.) and note any template or style guide it follows
-- Set the main document filename and bibliography path explicitly in the project's `CLAUDE.md`
-- Place figures in a `figs/` subdirectory beside the main `.tex` file (or wherever the chosen template requires)
+## Document Setup
+- Name the document type up front (poster, paper, report, proposal) and record the template or
+  style guide it follows in the project's `CLAUDE.md`
+- Record the main `.tex` filename and the bibliography path in `CLAUDE.md`
+- Keep figures in a `figs/` subdirectory beside the main `.tex`, or wherever the template requires
 
 ## Content Rules
-- **Never fabricate or hallucinate citations** — only cite references that have been verified against an authoritative source
-- Describe actual accomplishments, not aspirational ones
-- Credit students, collaborators, and volunteers accurately by name and role
-- Acknowledge funders explicitly per the funder's expectations
+- **Never fabricate or hallucinate citations.** Every reference is verified against the actual
+  paper before it is cited. Citing a paper you have not opened is how a club embarrasses itself
+  in front of the people who wrote it.
+- The reference list contains only works cited in the text
+- Describe accomplishments that happened, in the terms they actually happened in
+- **Credit students, club members, and volunteers by name and callsign**, accurately, in the
+  author list or acknowledgments. Undercrediting a student contributor is a real harm.
+- Acknowledge funders by name and grant number, exactly as the award requires
+- Verify every number in the prose against the data or script that produced it
 
-## LaTeX Workflow
-- Commit document changes in the appropriate submodule first (if applicable), then update the pointer in the main repo
-- If using Overleaf, pull before editing to avoid conflicts
-- Do not commit LaTeX build artifacts (`.aux`, `.log`, `.bbl`, `.bcf`, `.blg`, `.out`, `.toc`, `.fls`, `.fdb_latexmk`, etc.) — these are in `.gitignore`
-- Preserve existing LaTeX formatting patterns from the template where applicable
-- Verify a clean rebuild (zero undefined references, zero overfull boxes) before committing significant prose or layout changes
+## Figures
+- Every figure is reproducible from a committed script or a recorded procedure
+- Captions are self-contained: a reader skimming the figures understands each one
+- Color-blind-safe palettes; no rainbow or jet; color is never the only discriminator
+- Legends stay off the data
+
+## Workflow
+- If the document lives in a submodule, commit there first, then bump the pointer here
+- Using Overleaf, pull before editing to avoid conflicts
+- Do not commit build artifacts (`.aux`, `.log`, `.bbl`, `.bcf`, `.blg`, `.out`, `.toc`,
+  `.fls`, `.fdb_latexmk`); they are gitignored
+- Verify a clean rebuild with zero undefined references and zero undefined citations before
+  committing significant changes
