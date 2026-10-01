@@ -199,4 +199,4 @@ carries the actual running model ID.
 - **Sections/Files Affected**: `.claude/commands/commit.md` (Git Hash and submodule pointer-bump steps)
 - **Nature of Contribution**: Edit
 - **Human Review Status**: Pending review
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: 74d016a (PR w3usr/ai_project_template#3)
