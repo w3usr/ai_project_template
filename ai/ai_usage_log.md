@@ -189,4 +189,4 @@ carries the actual running model ID.
 - **Sections/Files Affected**: `.claude/commands/commit.md` (steps 7 to 10 rewritten for branch, PR, pointer bump, push order), `CLAUDE.md` (new Git Workflow section; Submodules steps), `.claude/rules/python-code.md`, `.claude/rules/web-development.md`, `.claude/rules/ai-governance.md`, `docs/ONBOARDING.md` (working loop, git commands), `README.md`
 - **Nature of Contribution**: Edit
 - **Human Review Status**: Pending review
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: 14bbda7 (branch pr-workflow, PR w3usr/ai_project_template#1), pending merge
