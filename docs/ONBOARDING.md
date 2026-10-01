@@ -135,9 +135,10 @@ them into a prompt.
 2. **Do the work**, with or without AI help.
 3. **Review what AI produced.** Actually read it. Run the code. Check the numbers against the
    source. Verify facts about the club with a human. You are putting your name on this.
-4. **Run `/commit`.** It logs the AI session, then commits.
-5. **Ask before pushing.** Confirm with the project lead until you have been told you do not
-   need to.
+4. **Run `/commit`.** It logs the AI session, commits on a feature branch, pushes that branch,
+   and opens a pull request.
+5. **The project lead reviews and merges.** Nothing goes onto `main` directly. If the review
+   asks for changes, make them on the same branch and run `/commit` again; the PR updates.
 
 ---
 
@@ -173,8 +174,8 @@ git log --oneline -10       # recent history
 git checkout -- <file>      # throw away my changes to one file
 ```
 
-Things to ask before doing: `git push`, `git reset --hard`, `git push --force`, deleting a
-branch, changing repository visibility. None of these are forbidden; they are just hard or
+Things to ask before doing: any push other than your own feature branch, `git reset --hard`,
+`git push --force`, merging a pull request, deleting a branch, changing repository visibility. None of these are forbidden; they are just hard or
 impossible to undo, so they get a second person.
 
 If git has you stuck, ask Claude to explain what the error means before running anything it

@@ -57,8 +57,9 @@ The site is a university club's public face; accessibility is a requirement, not
 - Validate and escape anything a visitor submits. A club contact form is still a public input.
 
 ## Workflow
-- If the site lives in its own repository as a submodule, commit inside the submodule first,
-  then bump the pointer here, then push the submodule before the parent.
+- Every change goes on a feature branch and through a pull request that the project lead
+  merges. If the site lives in its own repository as a submodule, open its PR first, bump the
+  pointer here only after it merges, and push the submodule before the parent.
 - Build a page locally and look at it before committing, including at phone width.
 - Preserve the existing theme, template, and CSS conventions of the site being edited.
 - Check that internal links resolve and that no `{{PLACEHOLDER}}` survives to production.

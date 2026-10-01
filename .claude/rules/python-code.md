@@ -36,12 +36,15 @@ satellite pass prediction, rig or rotator control, dashboards, data plotting.
   script, and record where it came from
 
 ## Commit Workflow
-- Code in a submodule: commit in the submodule first, then bump the pointer here, then push
-  the submodule before the parent
+- Every change goes on a feature branch and through a pull request; never commit or push
+  directly to `main`, and never merge (the project lead merges)
+- Code in a submodule: its own branch and PR first; bump the pointer here only after that PR
+  merges, and push the submodule before the parent
 - `[AI-assisted]` prefix on AI-assisted commits
 - Reference the tracking issue (`refs #N`, or `closes #N` when finishing the work is yours to
   declare)
-- Ask the project lead before pushing to any remote
+- Pushing a feature branch and opening its PR is standing permission once you approve the
+  commit; ask the project lead before any other push
 
 ## Open Source
 - Keep commit history clean and suitable for public visibility from the first commit

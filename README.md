@@ -88,7 +88,7 @@ click **Use this template** on the GitHub repository page.
 | `.claude/rules/web-development.md` | Content accuracy, University identity, accessibility, secrets, workflow |
 | `.claude/rules/latex-writing.md` | Citation integrity, crediting students and funders, figures, build hygiene |
 | `.claude/rules/python-code.md` | Code standards, data handling, commit workflow |
-| `.claude/commands/commit.md` | The `/commit` slash command: logs the AI session, commits submodules first, then the main repo |
+| `.claude/commands/commit.md` | The `/commit` slash command: logs the AI session, then commits each changed repo (submodules first) on a feature branch and opens a pull request for the project lead to review and merge |
 | `ai/ai_usage_log.md` | Append-only log of every substantive AI-assisted session |
 | `.gitignore` | Build artifacts, secrets, and bulk data for Python, LaTeX, and web projects |
 | `LICENSE`, `NOTICE` | CC BY 4.0, covering the scaffold itself. Replace both with the project's own license. |
