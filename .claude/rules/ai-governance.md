@@ -131,3 +131,4 @@ Keep disclosures short and accurate. Understating the scope of AI use is the fai
   proprietary information
 - Skip the AI usage log before committing AI-assisted changes
 - Force-push or hard-reset without explicit instruction from the project lead
+- Commit or push directly to `main`, or merge a pull request

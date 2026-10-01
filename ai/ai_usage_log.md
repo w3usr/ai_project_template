@@ -180,3 +180,13 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit, at NAF's direction
 - **Human Review Status**: Reviewed and verified
 - **Git Hash**: 4e494e2
+
+## [2026-10-01 16:26 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5-5
+- **Session Purpose**: Update the template so that every commit goes on a feature branch and
+  through a pull request that a human reviews and merges, replacing the earlier
+  "commit to main, ask before pushing" workflow.
+- **Sections/Files Affected**: `.claude/commands/commit.md` (steps 7 to 10 rewritten for branch, PR, pointer bump, push order), `CLAUDE.md` (new Git Workflow section; Submodules steps), `.claude/rules/python-code.md`, `.claude/rules/web-development.md`, `.claude/rules/ai-governance.md`, `docs/ONBOARDING.md` (working loop, git commands), `README.md`
+- **Nature of Contribution**: Edit
+- **Human Review Status**: Pending review
+- **Git Hash**: [fill in after committing]

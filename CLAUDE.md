@@ -96,17 +96,32 @@ directories to match the project. The scaffold expects:
 `-- {{PROJECT-SPECIFIC FOLDERS}}  <- e.g. src/, station/, web/, outreach/, logs/, hardware/
 ```
 
+## Git Workflow
+
+Every change goes through a pull request, in this repo and in every submodule. Nothing is
+committed directly to `main`.
+
+1. Branch from the remote tip: `git fetch && git switch -c <topic> origin/main`.
+2. Commit on the branch, with the `[AI-assisted]` prefix where applicable.
+3. Push the branch and open a PR: `git push -u origin <topic>`, then `gh pr create`.
+4. The project lead reviews and merges. Claude never pushes `main` and never merges.
+
+Once you have approved a commit, pushing its feature branch and opening or updating its PR is
+standing permission. Ask the project lead before any other push. Never force-push or hard-reset.
+
 ## Submodules (optional)
 
 If the project includes a submodule (an Overleaf document, the club website repo, a separate
 code repo):
 
-1. Make changes and commit **inside** the submodule first.
-2. Then commit the updated submodule pointer in this repo.
+1. Make changes and commit **inside** the submodule first, on its own branch and PR.
+2. Bump the submodule pointer in this repo only after the submodule PR has merged. Never point
+   this repo at an unmerged branch commit.
 3. Push the submodule **before** pushing this repo. A parent pushed ahead of its submodule
    works on your laptop and breaks for everyone who clones it.
 4. Use the `[AI-assisted]` prefix on commits whose content was produced with AI assistance.
-5. Ask the project lead before pushing to any remote.
+5. A repo whose remote cannot host a PR (Overleaf, say) is outside the PR rule; ask the
+   project lead before changing one.
 
 The `/commit` workflow auto-detects submodules via `git submodule status`.
 
