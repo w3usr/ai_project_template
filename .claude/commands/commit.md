@@ -38,9 +38,9 @@ Before drafting anything, look at the changed files for material that must never
 
 If any appear, stop and raise it with the user before committing.
 
-Then check the other direction: every rendered output this session produced or changed (a PDF
-memo, report, poster or final figure) is staged alongside its source and was rebuilt from the
-source being committed. The compiled PDF is not a build artifact; see `CLAUDE.md`.
+Then check the other direction: every memo, note or report PDF this session produced or
+changed is staged alongside its source and was rebuilt from it. Bulk generated output
+(figure batches, plot sets, image compilations) is not staged; see `CLAUDE.md`.
 
 ### 4. Ask the user for the session purpose
 Draft a one- or two-sentence purpose for the log. Show it to the user and ask them to confirm
