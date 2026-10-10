@@ -255,4 +255,4 @@ carries the actual running model ID.
 - **Human Review Status**: Pending review.
 - **Notes**: Tested on scratch repositories (behind: flagged with file list; only ignorable
   changes: silent) and on the live w2naf-academia template (flags both siblings' tooling PRs).
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: 532956a, branch `template-check-filter`
