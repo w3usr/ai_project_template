@@ -209,4 +209,4 @@ carries the actual running model ID.
 - **Sections/Files Affected**: `CLAUDE.md` (new "Rendered Output" section), `.claude/rules/latex-writing.md`, `.claude/rules/python-code.md`, `.claude/commands/commit.md` (step 3 also checks rendered output is staged), `.gitignore`.
 - **Nature of Contribution**: Edit (workflow guidance).
 - **Human Review Status**: Pending review.
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: cc72649, branch `commit-rendered-output`
