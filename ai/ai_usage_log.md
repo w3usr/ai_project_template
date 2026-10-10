@@ -219,4 +219,4 @@ carries the actual running model ID.
 - **Sections/Files Affected**: `CLAUDE.md` ("Curated Documents"), `.claude/commands/commit.md` (step 3), `.claude/rules/python-code.md`.
 - **Nature of Contribution**: Edit (workflow guidance).
 - **Human Review Status**: Pending review.
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: e240c57, branch `curated-documents-only`
