@@ -237,4 +237,4 @@ carries the actual running model ID.
   instantiated, unreachable upstream) and on this template. Hook format checked against the
   Claude Code hooks documentation. Project hooks run without a trust prompt; this one only reads
   `.claude/template.json` and makes one public HTTPS request to GitHub.
-- **Git Hash**: [fill in after committing]
+- **Git Hash**: e581426, branch `template-sync-tooling`
