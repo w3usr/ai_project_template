@@ -40,7 +40,7 @@ build/
 _site/
 .next/
 
-# LaTeX build artifacts
+# LaTeX build artifacts. The compiled PDF is not listed: it is committed with its source.
 *.aux
 *.log
 *.out
