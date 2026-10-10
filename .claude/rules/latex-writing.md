@@ -41,5 +41,7 @@ a HamSCI or ARRL paper, a grant application, a technical report on a station bui
 - Using Overleaf, pull before editing to avoid conflicts
 - Do not commit build artifacts (`.aux`, `.log`, `.bbl`, `.bcf`, `.blg`, `.out`, `.toc`,
   `.fls`, `.fdb_latexmk`); they are gitignored
+- **The compiled PDF is not a build artifact.** Commit it with its source, rebuilt from that
+  source in the same commit, so the repository always holds a readable copy of the document
 - Verify a clean rebuild with zero undefined references and zero undefined citations before
   committing significant changes

@@ -96,6 +96,17 @@ directories to match the project. The scaffold expects:
 `-- {{PROJECT-SPECIFIC FOLDERS}}  <- e.g. src/, station/, web/, outreach/, logs/, hardware/
 ```
 
+## Rendered Output
+
+**Commit the human-readable record.** Rendered documents (PDF memos, reports, posters,
+newsletters, slides) and final figures are committed next to the source that produces them.
+They show what the project produced without anyone having to rebuild it, and the commit history
+becomes a readable record of what was done. When a source changes, rebuild its output and commit
+both in the same commit, so they never disagree. What stays out of git: LaTeX intermediates
+(`.aux`, `.log`, `.bbl` and the like), web build output, caches, scratch output, and bulk data
+that a committed script regenerates. A single file over 50 MB needs a decision first (GitHub
+warns at 50 MB and rejects files over 100 MB).
+
 ## Git Workflow
 
 Every change goes through a pull request, in this repo and in every submodule. Nothing is

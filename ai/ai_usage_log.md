@@ -200,3 +200,13 @@ carries the actual running model ID.
 - **Nature of Contribution**: Edit
 - **Human Review Status**: Pending review
 - **Git Hash**: 74d016a (PR w3usr/ai_project_template#3)
+
+## [2026-10-10 12:09 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5-5 (1M context)
+- **Session Purpose**: Make committing rendered output standing guidance, at NAF's direction
+  (2026-10-10): memo and report PDFs and final figures capture the results of the code in
+  human-readable form and must be committed, or past work is hard to look back on.
+- **Sections/Files Affected**: `CLAUDE.md` (new "Rendered Output" section), `.claude/rules/latex-writing.md`, `.claude/rules/python-code.md`, `.claude/commands/commit.md` (step 3 also checks rendered output is staged), `.gitignore`.
+- **Nature of Contribution**: Edit (workflow guidance).
+- **Human Review Status**: Pending review.
+- **Git Hash**: [fill in after committing]
